@@ -1,3 +1,7 @@
 problems/**
 library/**
 dotfiles/**
+
+# .envはホワイトリスト形式で設定する
+.env
+!/.env
