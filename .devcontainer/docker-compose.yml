@@ -13,7 +13,6 @@ services:
     volumes:
       - ../problems:/root/problems:cached
       - ../library:/root/library:cached
-      - ../acc-template-python:/root/.config/atcoder-cli-nodejs/python:cached
       - ../.vscode:/root/.vscode:cached
 
     # Overrides default command so things don't shut down after the process ends.
