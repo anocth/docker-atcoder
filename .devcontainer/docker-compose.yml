@@ -11,9 +11,8 @@ services:
     # localとcontainer間のファイルを同期させる
     # ${local}:${container}
     volumes:
-      - ../problems:/root/problems:cached
-      - ../library:/root/library:cached
       - ../.vscode:/root/.vscode:cached
+      - ../problems:/root/problems:cached
 
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"
