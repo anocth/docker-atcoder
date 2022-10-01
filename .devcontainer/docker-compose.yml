@@ -1,18 +1,46 @@
-version: '3'
+version: '3.8'
+
 services:
   dev:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        USERNAME: atcoder
+        GROUPNAME: atcoder
+        UID: 1000
+        GID: 1000
 
     # イメージ名を指定
-    image: hinamimi/atcoder:dev
+    image: anocth/atcoder:dev
 
     # localとcontainer間のファイルを同期させる
     # ${local}:${container}
     volumes:
-      - ../.vscode:/root/.vscode:cached
-      - ../problems:/root/problems:cached
+      - type: bind
+        source: ../.vscode
+        target: /home/atcoder/.vscode
+        consistency: cached
+      - type: bind
+        source: ../problems
+        target: /home/atcoder/problems
+        consistency: cached
+      - type: bind
+        source: ../acc-templates
+        target: /home/atcoder/acc-templates
+        consistency: cached
+
+      # online-judge-toolsとatocder-cliのコンフィグ・セッション情報
+      - type: volume
+        source: oj
+        target: /home/atcoder/.local/share/online-judge-tools/
+      - type: volume
+        source: acc
+        target: /home/atcoder/.config/atcoder-cli-nodejs/
 
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"
+
+volumes:
+  oj:
+  acc:
