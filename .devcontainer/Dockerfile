@@ -17,7 +17,7 @@ RUN set -eux; \
 RUN set -eux; \
 	apt-get update; \
 	DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-		locales less wget curl git \
+		locales time less wget curl git \
 		gcc-9 g++-9 libboost-dev \
 		python3.8 python3-pip pypy3 \
 		nodejs npm \
