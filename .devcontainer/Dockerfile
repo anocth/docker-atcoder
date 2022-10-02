@@ -111,4 +111,7 @@ RUN set -eux; \
 		echo "fisher install jethrokuan/z"; \
 		echo "fisher install jethrokuan/fzf"; \
 	} | fish; \
-	echo "alias gac='g++ -std=gnu++17 -Wall -Wextra -O2 -DONLINE_JUDGE'" > ~/.config/fish/conf.d/atcoder.fish
+	{ \
+		echo "alias gac='g++ -std=gnu++17 -Wall -Wextra -O2 -DONLINE_JUDGE'"; \
+		echo "alias bojt='gac -o ./a.out main.cpp && oj t'"; \
+	} > ~/.config/fish/conf.d/atcoder.fish
