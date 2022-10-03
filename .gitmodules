@@ -1,0 +1,3 @@
+[submodule "acc-templates/cpp"]
+	path = acc-templates/cpp
+	url = git@github.com:anocth/acc-template-cpp.git
