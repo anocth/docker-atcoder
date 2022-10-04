@@ -110,7 +110,11 @@ RUN set -eux; \
 		echo "fisher install 0rax/fish-bd"; \
 		echo "fisher install jethrokuan/z"; \
 		echo "fisher install jethrokuan/fzf"; \
+		echo "fisher install pure-fish/pure"; \
 	} | fish; \
+	{ \
+		echo "set --universal pure_color_current_directory DCDCDC"; \
+	} >> ~/.config/fish/config.fish; \
 	{ \
 		echo "alias gac='g++ -std=gnu++17 -Wall -Wextra -O2 -DONLINE_JUDGE'"; \
 		echo "alias bojt='gac -o ./a.out main.cpp && oj t'"; \
