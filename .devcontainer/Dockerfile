@@ -13,7 +13,7 @@ RUN set -eux; \
 	; \
 	rm -rf /var/lib/apt/lists/*
 
-# 実行環境のインストール
+# 開発環境のインストール
 RUN set -eux; \
 	apt-get update; \
 	DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
@@ -74,7 +74,7 @@ ENV LANG="ja_JP.UTF-8" \
 	TZ=JST-9 \
 	TERM=xterm
 
-# fish関係のインストール
+# その他のインストール
 RUN set -eux; \
 	apt-get update; \
 	DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
