@@ -37,7 +37,7 @@
 	// "shutdownAction": "none",
 
 	// Run commands after the container is created.
-	// "postCreateCommand": "",
+	"postCreateCommand": "sed -i 's/2<$username_color$username$at_sign_color$at_sign$hostname_color$hostname>2/$username_color$username$at_sign_color$at_sign$hostname_color$hostname/' ~/.config/fish/functions/_pure_user_at_host.fish",
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "atcoder"
