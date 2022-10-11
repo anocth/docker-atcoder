@@ -20,9 +20,6 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"forbeslindesay.forbeslindesay-taskrunner", // Run tasks from Explorer pane
-		"ms-python.python", // Python IntelliSense (Microsoft)
-		"ms-python.vscode-pylance", // Python language server (Microsoft)
 		"ms-vscode.cpptools", // C/C++ IntelliSense (Microsoft)
 		"visualstudioexptteam.vscodeintellicode" // AI-assisted development (Microsoft)
 	],
