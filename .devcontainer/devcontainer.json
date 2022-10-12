@@ -20,6 +20,7 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
+		"vadimcn.vscode-lldb", // A native debugger powered by LLDB. Debug C++, Rust and other compiled languages.
 		"ms-vscode.cpptools", // C/C++ IntelliSense (Microsoft)
 		"visualstudioexptteam.vscodeintellicode" // AI-assisted development (Microsoft)
 	],
