@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "linux-gcc-x64",
+            "compilerArgs": [
+                "-std=gnu++17",
+                "-Wall",
+                "-Wextra",
+                "-O2",
+                "-DONLINE_JUDGE"
+            ]
+        }
+    ],
+    "version": 4
+}
